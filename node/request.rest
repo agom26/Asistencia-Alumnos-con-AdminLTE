@@ -1,0 +1,30 @@
+GET http://localhost:5000/asistencias
+
+###
+
+GET http://localhost:5000/asistencias/1
+
+###
+POST http://localhost:5000/asistencias
+Content-Type: application/json
+
+{
+    "student_name":"Rosario Motta",
+    "checkin":"10:00",
+    "checkout":"13:00",
+    "date":"6-11-2022"
+}
+
+###
+PUT http://localhost:5000/asistencias/2
+Content-Type: application/json
+
+{
+    "student_name":"Ana Gabriela Ovalle",
+    "checkin":"11:00",
+    "checkout":"13:00",
+    "date":"6-11-2022"
+}
+
+###
+DELETE http://localhost:5000/asistencias/1
