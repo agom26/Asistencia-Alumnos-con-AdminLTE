@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
+
 const AddAsistencia = () => {
   const [student_name, setStudentName] = useState("");
   const [checkin, setCheckin] = useState("");
@@ -47,7 +48,7 @@ const AddAsistencia = () => {
                 className="input form-control"
                 value={checkin}
                 onChange={(e) => setCheckin(e.target.value)}
-                placeholder="Hora de entrada"
+                placeholder="hh:mm"
               />
             </div>
           </div>
@@ -60,7 +61,7 @@ const AddAsistencia = () => {
                 className="input form-control"
                 value={checkout}
                 onChange={(e) => setCheckout(e.target.value)}
-                placeholder="Hora de salida"
+                placeholder="hh:mm"
               />
             </div>
           </div>
@@ -82,7 +83,9 @@ const AddAsistencia = () => {
             <button type="submit" className="btn btn-success">
               {" "}
               Agregar{" "}
-            </button>
+            </button>{"  "}
+
+            <Link to={`/`} className='btn btn-secondary'>Cancelar</Link>
           </div>
         </form>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import axios from "axios";
-import { useNavigate,useParams } from "react-router-dom";
+import { useNavigate,useParams,Link } from "react-router-dom";
 const EditAsistencia = () => {
   const [student_name, setStudentName] = useState("");
   const [checkin, setCheckin] = useState("");
@@ -93,10 +93,10 @@ const EditAsistencia = () => {
           </div>
 
           <div className="field">
-            <button type="submit" className="btn btn-success mt-3">
-              {" "}
-              Actualizar{" "}
-            </button>
+            <button type="submit" className="btn btn-success ">
+              Actualizar
+            </button>{"  "}
+            <Link to={`/`} className='btn btn-secondary'>Cancelar</Link>
           </div>
         </form>
       </div>

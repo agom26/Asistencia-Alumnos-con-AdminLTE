@@ -26,7 +26,7 @@ const deleteAsistencia=async(id)=>{
     <div>
       <div className="columns mt-5 mr-5 ml-5" >
         <div className="column ">
-            <Link to={`add`} className='btn btn-success'>Crear asistencia</Link>
+            <Link to={`add`} className='btn btn-success mb-3 mt-3'>Crear asistencia  </Link>
             <table className='table'>
                 <thead>
                     <tr>
